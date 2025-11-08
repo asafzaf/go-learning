@@ -46,7 +46,13 @@ func main() {
 	// printState()
 
 	cards := newDeck()
-	fmt.Println(cards.toString())
+	// fmt.Println(cards.toString()
+	err := cards.saveToFile("my_cards")
+	if err != nil {
+		fmt.Println("Error saving to file:", err)
+	}
+	loadedCards := newDeckFromFile("my_cards")
+	loadedCards.print()
 }
 
 func drawCard() string {
