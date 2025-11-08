@@ -25,4 +25,5 @@ func main() {
 	fmt.Println(p1)
 	p1 = person{"Alice", "Johnson", 25}
 	fmt.Println(p1)
+	fmt.Printf("%+v", p1)
 }
