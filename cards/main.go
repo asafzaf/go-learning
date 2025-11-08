@@ -23,9 +23,11 @@ func main() {
 	// fmt.Println(price)
 	// fmt.Println(isAvailable)
 
-	cardsArray := deck{"Ace of Spades", "Two of Hearts", "Three of Diamonds", drawCard()}
+	// cardsArray := deck{"Ace of Spades", "Two of Hearts", "Three of Diamonds", drawCard()}
 
-	cardsArray = append(cardsArray, "Four of Clubs")
+	// cardsArray = append(cardsArray, "Four of Clubs")
+
+	cardsArray := newDeck()
 
 	cardsArray.print()
 
