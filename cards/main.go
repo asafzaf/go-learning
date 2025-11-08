@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 
 	// First way to declare a variable
@@ -25,17 +23,13 @@ func main() {
 	// fmt.Println(price)
 	// fmt.Println(isAvailable)
 
-	cardsArray := []string{"Ace of Spades", "Two of Hearts", "Three of Diamonds", drawCard()}
+	cardsArray := deck{"Ace of Spades", "Two of Hearts", "Three of Diamonds", drawCard()}
 
 	cardsArray = append(cardsArray, "Four of Clubs")
 
-	fmt.Println(cardsArray)
+	cardsArray.print()
 
-	for i, card := range cardsArray {
-		fmt.Println(i, card)
-	}
-
-	printState()
+	// printState()
 }
 
 func drawCard() string {
