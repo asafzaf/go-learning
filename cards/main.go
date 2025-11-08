@@ -16,9 +16,16 @@ func main() {
 	var isAvailable bool = true
 	isAvailable = false
 
+	card3 := drawCard()
+	fmt.Println(card3)
+
 	fmt.Println(card)
 	fmt.Println(card2)
 	fmt.Println(age)
 	fmt.Println(price)
 	fmt.Println(isAvailable)
+}
+
+func drawCard() string {
+	return "King of Clubs"
 }
