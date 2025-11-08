@@ -8,6 +8,12 @@ type person struct {
 	firstName string
 	lastName  string
 	age       int
+	contact   contactInfo
+}
+
+type contactInfo struct {
+	email   string
+	zipCode int
 }
 
 func main() {
@@ -23,7 +29,7 @@ func main() {
 	fmt.Println(p1)
 	p1.age++
 	fmt.Println(p1)
-	p1 = person{"Alice", "Johnson", 25}
+	p1 = person{"Alice", "Johnson", 25, contactInfo{"alice@example.com", 12345}}
 	fmt.Println(p1)
 	fmt.Printf("%+v", p1)
 }
