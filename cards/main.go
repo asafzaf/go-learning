@@ -24,6 +24,8 @@ func main() {
 	fmt.Println(age)
 	fmt.Println(price)
 	fmt.Println(isAvailable)
+
+	printState()
 }
 
 func drawCard() string {
