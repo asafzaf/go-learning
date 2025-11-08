@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 
 	// First way to declare a variable
@@ -47,12 +45,15 @@ func main() {
 
 	cards := newDeck()
 	// fmt.Println(cards.toString()
-	err := cards.saveToFile("my_cards")
-	if err != nil {
-		fmt.Println("Error saving to file:", err)
-	}
-	loadedCards := newDeckFromFile("my_cards")
-	loadedCards.print()
+	// err := cards.saveToFile("my_cards")
+	// if err != nil {
+	// 	fmt.Println("Error saving to file:", err)
+	// }
+	// loadedCards := newDeckFromFile("my_cards")
+	// loadedCards.print()
+
+	cards.shuffle()
+	cards.print()
 }
 
 func drawCard() string {
