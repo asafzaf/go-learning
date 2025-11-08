@@ -17,4 +17,12 @@ func main() {
 		age:       30,
 	}
 	fmt.Println(p1)
+	p1.firstName = "Jane"
+	p1.lastName = "Smith"
+	p1.age = 28
+	fmt.Println(p1)
+	p1.age++
+	fmt.Println(p1)
+	p1 = person{"Alice", "Johnson", 25}
+	fmt.Println(p1)
 }
