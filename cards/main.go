@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	// First way to declare a variable
@@ -29,7 +31,17 @@ func main() {
 
 	cardsArray := newDeck()
 
-	cardsArray.print()
+	hand, remainingDeck := deal(cardsArray, 5)
+
+	// cardsArray.print()
+
+	fmt.Println("Hand:")
+	hand.print()
+	fmt.Println("\nRemaining Deck:")
+	remainingDeck.print()
+
+	greeting := "Hello, welcome to the card game!"
+	fmt.Println([]byte(greeting))
 
 	// printState()
 }
