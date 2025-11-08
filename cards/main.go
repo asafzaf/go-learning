@@ -29,21 +29,24 @@ func main() {
 
 	// cardsArray = append(cardsArray, "Four of Clubs")
 
-	cardsArray := newDeck()
+	// cardsArray := newDeck()
 
-	hand, remainingDeck := deal(cardsArray, 5)
+	// hand, remainingDeck := deal(cardsArray, 5)
 
-	// cardsArray.print()
+	// // cardsArray.print()
 
-	fmt.Println("Hand:")
-	hand.print()
-	fmt.Println("\nRemaining Deck:")
-	remainingDeck.print()
+	// fmt.Println("Hand:")
+	// hand.print()
+	// fmt.Println("\nRemaining Deck:")
+	// remainingDeck.print()
 
-	greeting := "Hello, welcome to the card game!"
-	fmt.Println([]byte(greeting))
+	// greeting := "Hello, welcome to the card game!"
+	// fmt.Println([]byte(greeting))
 
 	// printState()
+
+	cards := newDeck()
+	fmt.Println(cards.toString())
 }
 
 func drawCard() string {
