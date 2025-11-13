@@ -26,12 +26,21 @@ func main() {
 			zipCode: 12345,
 		},
 	}
-	p1.updateName("Jane")
+
+	johnPointer := &p1
+
+	johnPointer.updateName("Jane")
+	johnPointer.print()
+
+	p1.print()
+
+	// Alternatively, i can call the method directly on the struct instance
+	p1.updateName("Mike")
 	p1.print()
 }
 
-func (p *person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {
