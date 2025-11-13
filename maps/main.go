@@ -14,6 +14,25 @@ func main() {
 	fmt.Println(colors)
 
 	printMap(colors)
+
+	colors["yellow"] = "#ffff00"
+	printMap(colors)
+	delete(colors, "green")
+	printMap(colors)
+
+	value, ok := colors["purple"]
+	if ok {
+		fmt.Println("The hex code for purple is:", value)
+	} else {
+		fmt.Println("Purple not found in the map")
+	}
+
+	value2, ok := colors["yellow"]
+	if ok {
+		fmt.Println("The hex code for yellow is:", value2)
+	} else {
+		fmt.Println("Yellow not found in the map")
+	}
 }
 
 func printMap(m map[string]string) {
